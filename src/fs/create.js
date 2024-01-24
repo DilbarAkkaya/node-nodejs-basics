@@ -1,6 +1,7 @@
 import fs from 'fs';
+import path from 'path';
 const create = async () => {
-    fs.writeFile('src/fs/files/fresh.txt', 'I am fresh and young', { flag: 'wx' }, (err) => {
+    fs.writeFile(path.join(path.resolve(), 'src', 'fs', 'files', 'fresh.txt'), 'I am fresh and young', { flag: 'wx' }, (err) => {
         if (err) throw new Error('FS operation failed');
     })
 }
